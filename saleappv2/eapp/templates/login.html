@@ -1,0 +1,42 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}Đăng nhập{% endblock %}
+
+
+{% block content %}
+    <h1 class="text-center text-success mt-2">ĐĂNG NHẬP NGƯỜI DÙNG</h1>
+    <form method="post" action="/login">
+        <div class="form-floating mb-3 mt-3">
+              <input type="text" class="form-control" id="username" placeholder="Tên đăng nhập" name="username">
+              <label for="username">Tên đăng nhập</label>
+        </div>
+        <div class="form-floating mb-3 mt-3">
+              <input type="password" class="form-control" id="password" placeholder="Mật khẩu" name="password">
+              <label for="password">Mật khẩu</label>
+        </div>
+        <div class="form-floating mb-3 mt-3">
+            <button type="submit" class="btn btn-success">Đăng nhập</button>
+        </div>
+    </form>
+
+{#    {% if products %}#}
+{#        <div class="row">#}
+{#            {% for p in products %}#}
+{#            <div class="col-md-3 col-6 p-6 p-2">#}
+{#                <div class="card">#}
+{#                    <img class="card-img-top" src="{{ p.image }}" alt="Card image">#}
+{#                    <div class="card-body">#}
+{#                        <h4 class="card-title">{{ p.name }}</h4>#}
+{#                        <p class="card-text">{{ p.price }} VNĐ</p>#}
+{#                        <a href="#" class="btn btn-primary">Xem chi tiết</a>#}
+{#                        <button class="btn btn-danger">Đặt hàng</button>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            {% endfor %}#}
+{#        </div>#}
+{#    {% else %}#}
+{#        <div class="alert alert-warning mt-2">KHÔNG CÓ SẢN PHẨM NÀO !</div>#}
+{##}
+{#    {% endif %}#}
+{% endblock %}
